@@ -19,6 +19,8 @@
     <module>command</module>
     <module>decorator</module>
     <module>template</module>
+    <module>composite</module>
+    <module>prototype</module>
   </modules>
 
   <name>Software_Design_Patterns</name>

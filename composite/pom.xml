@@ -9,9 +9,9 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>facade</artifactId>
+    <artifactId>composite</artifactId>
 
-    <name>facade</name>
+    <name>composite</name>
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
 
