@@ -1,8 +1,10 @@
+import java.util.Objects;
+
 public class VehicleFactory {
     public static IVehicle getInstance(String identifier) {
-        if (identifier == "truck") {
+        if (Objects.equals(identifier, "truck")) {
             return new Truck();
-        } else if (identifier == "bike") {
+        } else if (Objects.equals(identifier, "bike")) {
             return new Bike();
         } else {
             return new Car();
