@@ -1,11 +1,14 @@
+import java.util.Objects;
+
 public class ToyotaFactory implements IFactory{
+
     @Override
     public IVehicle getVehicle(String identifier) {
-        if (identifier == "truck") {
+        if (Objects.equals(identifier, "truck")) {
             return new Truck("toyota");
-        } else if (identifier == "bike") {
+        } else if (Objects.equals(identifier, "bike")) {
             return new Bike("toyota");
-        } else if (identifier == "car") {
+        } else if (Objects.equals(identifier, "car")) {
             return new Car("toyota");
         } else {
             return new Car("toyota");

@@ -1,6 +1,7 @@
 package org.example;
 
 public class PayPal implements IPaymentGateway{
+
     @Override
     public Integer checkBalance() {
         System.out.println("Checking Balance on PayPal : ");

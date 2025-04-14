@@ -1,7 +1,8 @@
 package org.example.executers;
 
 public class BCommandExecuter implements CommandExecuter{
-    private static String commandName = "B";
+
+    private static final String commandName = "B";
 
     @Override
     public boolean isApplicable(String command) {
@@ -12,4 +13,5 @@ public class BCommandExecuter implements CommandExecuter{
     public void runCommand() {
         System.out.println("B command is being run");
     }
+
 }

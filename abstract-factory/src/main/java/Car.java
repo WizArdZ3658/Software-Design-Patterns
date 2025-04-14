@@ -1,5 +1,7 @@
 public class Car implements IVehicle{
+
     private final String companyName;
+
     public Car(String companyName) {
         this.companyName = companyName;
     }

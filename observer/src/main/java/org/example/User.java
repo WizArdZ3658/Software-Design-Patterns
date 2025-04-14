@@ -1,7 +1,8 @@
 package org.example;
 
 public class User implements IConsumer {
-    private Integer userId;
+
+    private final Integer userId;
 
     public User(Integer id) {
         this.userId = id;

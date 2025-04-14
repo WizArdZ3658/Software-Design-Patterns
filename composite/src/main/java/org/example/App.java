@@ -12,8 +12,6 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
-
         Component mouse = new Leaf("G402 Mouse", 4000.00);
         Component keyboard = new Leaf("Keyboard", 5000.00);
         Component cpu = new Leaf("CPU", 20000.00);

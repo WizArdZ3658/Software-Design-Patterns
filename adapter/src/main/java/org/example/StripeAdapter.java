@@ -1,6 +1,7 @@
 package org.example;
 
 public class StripeAdapter implements IPaymentGateway{
+
     private static Stripe stripeObj = new Stripe();
 
     @Override

@@ -4,6 +4,7 @@ import lombok.Setter;
 @Setter
 @Getter
 public class Car {
+
     private Integer modelNumber;
     private String name;
     private String engineName;
