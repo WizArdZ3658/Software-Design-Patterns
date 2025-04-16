@@ -21,6 +21,7 @@
     <module>template</module>
     <module>composite</module>
     <module>prototype</module>
+    <module>chain-of-responsibility</module>
   </modules>
 
   <name>Software_Design_Patterns</name>
