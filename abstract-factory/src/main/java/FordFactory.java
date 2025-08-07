@@ -1,17 +1,27 @@
-import java.util.Objects;
+import enums.VehicleType;
 
-public class FordFactory implements IFactory{
+import java.lang.reflect.InvocationTargetException;
+import java.util.HashMap;
+import java.util.Map;
+
+public class FordFactory implements IFactory {
+
+    private static final Map<VehicleType, Class<? extends IVehicle>> registry = new HashMap<>();
+
+    static {
+        registry.put(VehicleType.BIKE, Bike.class);
+        registry.put(VehicleType.TRUCK, Truck.class);
+        registry.put(VehicleType.CAR, Car.class);
+    }
 
     @Override
-    public IVehicle getVehicle(String identifier) {
-        if (Objects.equals(identifier, "truck")) {
-            return new Truck("ford");
-        } else if (Objects.equals(identifier, "bike")) {
-            return new Bike("ford");
-        } else if (Objects.equals(identifier, "car")) {
-            return new Car("ford");
-        } else {
-            return new Car("ford");
+    public IVehicle getVehicle(VehicleType type) {
+
+        try {
+            Class<? extends IVehicle> vehicleClass = registry.get(type);
+            return vehicleClass.getConstructor(String.class).newInstance("ford");
+        } catch (NoSuchMethodException | InstantiationException | IllegalAccessException | InvocationTargetException e) {
+            throw new RuntimeException(e);
         }
     }
 }

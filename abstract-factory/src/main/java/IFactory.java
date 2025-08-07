@@ -1,4 +1,6 @@
+import enums.VehicleType;
+
 public interface IFactory {
 
-    public IVehicle getVehicle(String identifier);
+    IVehicle getVehicle(VehicleType type);
 }
