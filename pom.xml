@@ -15,12 +15,10 @@
     <module>observer</module>
     <module>adapter</module>
     <module>strategy</module>
-    <module>facade</module>
     <module>command</module>
     <module>decorator</module>
     <module>template</module>
     <module>composite</module>
-    <module>prototype</module>
     <module>chain-of-responsibility</module>
   </modules>
 
