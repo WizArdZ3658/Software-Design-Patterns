@@ -1,10 +1,19 @@
 package org.example.clients;
 
 import org.example.models.ContextData;
+import org.example.responsibilities.BaseResponsibility;
 
-public interface Client {
+public abstract class Client {
 
-    void initializeResponsibilities();
-    void startClientOperation(ContextData contextData);
+    private BaseResponsibility firstResponsibility;
+
+    public abstract void initializeResponsibilities();
+    public void startClientOperation(ContextData contextData) {
+        this.firstResponsibility.performResponsibility(contextData);
+    }
+
+    protected void setFirstResponsibility(BaseResponsibility resp) {
+        this.firstResponsibility = resp;
+    }
 
 }

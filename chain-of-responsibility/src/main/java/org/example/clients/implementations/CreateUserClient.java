@@ -8,9 +8,7 @@ import org.example.responsibilities.implementations.AddIdResponsibility;
 import org.example.responsibilities.implementations.AddNameResponsibility;
 
 
-public class CreateUserClient implements Client {
-
-    private BaseResponsibility firstResponsibility;
+public class CreateUserClient extends Client {
 
     public CreateUserClient() {
         this.initializeResponsibilities();
@@ -24,11 +22,6 @@ public class CreateUserClient implements Client {
 
         resp1.setNextResponsibility(resp2);
         resp2.setNextResponsibility(resp3);
-        this.firstResponsibility = resp1;
-    }
-
-    @Override
-    public void startClientOperation(ContextData contextData) {
-        this.firstResponsibility.performResponsibility(contextData);
+        this.setFirstResponsibility(resp1);
     }
 }
